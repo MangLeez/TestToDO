@@ -3,7 +3,7 @@ var incompleteTasks = document.getElementById("incompletetasks");
 var completedTasks = document.getElementById("completedtasks");
 
 //New Task List Item
-var createNewTaskElement = function(taskString) {
+function createNewTaskElement(taskString) {
     //Create List Item
     var listItem = document.createElement("li");
     var checkBox = document.createElement("input");
@@ -25,7 +25,7 @@ var createNewTaskElement = function(taskString) {
 }
 
 //Add a new task
-var addTask = function() {
+function addTask() {
     console.log("Add task...");
     var taskInput = document.getElementById("newtask");
     //Create a new list item with the text from #newtask:
@@ -44,7 +44,7 @@ addButton.addEventListener("click", addTask);
 
 
 //Delete an existing task
-var deleteTask = function() {
+function deleteTask() {
     console.log("Delete task...");
     var listItem = this.parentNode;
     var ul = listItem.parentNode;
@@ -54,7 +54,7 @@ var deleteTask = function() {
 }
 
 //Mark a task as complete
-var taskCompleted = function() {
+function taskCompleted() {
     console.log("Task complete...");
     //Append the task list item to the #completedtasks
     var listItem = this.parentNode;
@@ -63,7 +63,7 @@ var taskCompleted = function() {
 }
 
 //Mark a task as incomplete
-var taskIncomplete = function() {
+function taskIncomplete() {
     console.log("Task incomplete...");
     //Append the task list item to the #incompletetasks
     var listItem = this.parentNode;
@@ -71,7 +71,7 @@ var taskIncomplete = function() {
     bindTaskEvents(listItem, taskCompleted);
 }
 
-var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+function bindTaskEvents(taskListItem, checkBoxEventHandler) {
     console.log("Bind list item events");
     //select taskListItem's children
     var checkBox = taskListItem.querySelector("input[type=checkbox]");
@@ -79,7 +79,6 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 
     //bind checkBoxEventHandler to checkbox
     checkBox.onchange = checkBoxEventHandler;
-
     //bind deleteTask to delete button
     deleteButton.onclick = deleteTask;
 }
