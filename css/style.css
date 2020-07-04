@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-    color: #333;
+    color: #323;
 }
 
 
@@ -101,8 +101,29 @@ input#newtask {
     width: 318px;
 }
 
+p>button {
+    display: inline-block;
+    padding: 4px 2px;
+    font-size: 9px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 5px #999;
+}
+
 p>button:hover {
-    color: #0FC57C;
+    background-color: #3e8e41
+}
+
+p>button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
@@ -131,8 +152,29 @@ li>input[type="text"] {
     width: 226px;
 }
 
+li>.delete {
+    display: inline-block;
+    padding: 4px 2px;
+    font-size: 9px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 5px #999;
+}
+
 li>.delete:hover {
-    color: #CF2323;
+    background-color: #ff0000
+}
+
+li>.delete:active {
+    background-color: #000000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
@@ -141,19 +183,4 @@ li>.delete:hover {
 #completedtasks label {
     text-decoration: line-through;
     color: #888;
-}
-
-
-/* Edit Task */
-
-ul li input[type=text] {
-    display: none;
-}
-
-ul li.editMode input[type=text] {
-    display: block;
-}
-
-ul li.editMode label {
-    display: none;
 }
