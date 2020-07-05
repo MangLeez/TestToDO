@@ -5,11 +5,12 @@ body {
     color: #333;
     font-family: Lato, sans-serif;
     background-color: #e4e4e4;
+    background-image: url("bkk.jpg");
 }
 
 .container {
     display: block;
-    width: 400px;
+    width: 350px;
     margin: 10px auto 100px;
     background-color: #fff;
     padding: 0px 10px 10px 10px;
@@ -47,7 +48,7 @@ button {
     border: 0px;
     color: #888;
     font-size: 15px;
-    width: 60px;
+    width: 62px;
     margin: 10px 0 0;
     font-family: Lato, sans-serif;
     cursor: pointer;
@@ -76,8 +77,22 @@ input[type="text"] {
     font-size: 18px;
     line-height: 18px;
     height: 18px;
+    padding: 8px;
+    border: 2px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+}
+
+input[type="date"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    width: 314px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     background: #fff;
     border-radius: 6px;
     font-family: Lato, sans-serif;
@@ -102,9 +117,11 @@ input#newtask {
 }
 
 p>button {
+    float: none;
     display: inline-block;
-    padding: 4px 2px;
-    font-size: 9px;
+    padding: 7px 170px;
+    height: 30px;
+    font-size: 15px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
