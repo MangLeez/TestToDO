@@ -21,17 +21,20 @@ function createNewTaskElement(taskString) {
     listItem.appendChild(label);
     listItem.appendChild(deleteButton);
 
+
     return listItem;
 }
+
 
 //Add a new task
 function addTask() {
     console.log("Add task...");
     var taskInput = document.getElementById("newtask");
+    var taskbday = document.getElementById("bday");
     //Create a new list item with the text from #newtask:
-    var listItem = createNewTaskElement(taskInput.value);
-    if (taskInput.value === "") {
-        window.alert("Your must write something!")
+    var listItem = createNewTaskElement(taskInput.value + "    " + taskbday.value);
+    if (taskInput.value === "" || taskbday.value === "") {
+        window.alert("Please fill in all!")
     } else {
         //Append listItem to incompleteTasks
         incompleteTasks.appendChild(listItem);
@@ -52,6 +55,7 @@ function deleteTask() {
     //Remove the parent list item from the ul
     ul.removeChild(listItem);
 }
+
 
 //Mark a task as complete
 function taskCompleted() {
@@ -81,6 +85,7 @@ function bindTaskEvents(taskListItem, checkBoxEventHandler) {
     checkBox.onchange = checkBoxEventHandler;
     //bind deleteTask to delete button
     deleteButton.onclick = deleteTask;
+
 }
 
 
